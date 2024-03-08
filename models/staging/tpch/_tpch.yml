@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_tpch__customer
+    description: staging layer for customer data
+    columns:
+      - name: customer_id
+        data_type: varchar
+        tests:
+          - unique
+          - not_null
+      - name: address
+      - name: nation_key
+        tests:
+          - not_null      
+      - name: account_balance
+      - name: marketing_segment
+
+        

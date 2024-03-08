@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: staging layer for customer data
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: customer_id
+        data_type: varchar
+        constraints:
+          - type: not_null
+      - name: address
+        data_type: varchar
+      - name: nation_key
+        data_type: bigint
+        tests:
+          - not_null      
+      - name: account_balance
+        data_type: varchar
+      - name: marketing_segment
+        data_type: varchar
+
+        
