@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: tpch
+    description: Sample TPCH data
+    loader: sample
+    catalog: tpch
+    schema: tiny  # update this to try a bigger dataset: sf100, sf1000...
+    tables:
+      - name: customer
+        columns:
+          - name: customer
+          - name: custkey
+          - name: name
+          - name: address
+          - name: nationkey
+          - name: phone
+          - name: acctbal
+          - name: mktsegment
+          - name: comment
